@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Interactive Dashboard for Q1 Parlay System"""
+"""Interactive Dashboard for Q1 Parlay System - Password Protected"""
 import dash
 from dash import dcc, html, dash_table
 from dash.dependencies import Input, Output
+import dash_auth
 import plotly.graph_objs as go
 import plotly.express as px
 import pandas as pd
@@ -14,7 +15,18 @@ Q1_THRESHOLD = 52.5
 
 app = dash.Dash(__name__)
 app.title = "Q1 Parlay System Dashboard"
-server = app.server  # CRITICAL: Expose for Gunicorn
+server = app.server
+
+# PASSWORD PROTECTION
+# Change these credentials!
+VALID_USERNAME_PASSWORD_PAIRS = {
+    'slomo': 'parlay2025'  # Change this!
+}
+
+auth = dash_auth.BasicAuth(
+    app,
+    VALID_USERNAME_PASSWORD_PAIRS
+)
 
 # Load data function
 def load_data():
@@ -179,7 +191,7 @@ def update_dashboard(n_clicks, n_intervals):
         results_sorted['Game'] = results_sorted['away_team'] + ' @ ' + results_sorted['home_team']
         
         date_tables = []
-        for date in results_sorted['date'].unique()[:5]:  # Last 5 days only
+        for date in results_sorted['date'].unique()[:5]:
             date_games = results_sorted[results_sorted['date'] == date]
             daily_wins = len(date_games[date_games['result'] == 'WIN'])
             
