@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+venv/
+*.csv
+.DS_Store
+2025_SEASON_GUIDE.md
