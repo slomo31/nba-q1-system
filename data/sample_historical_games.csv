@@ -1,0 +1,9 @@
+game_id,date,season,home_team,away_team,home_q1_score,away_q1_score,q1_total,home_final_score,away_final_score,game_total,home_pace,away_pace
+2024-11-05_MIL_TOR,2024-11-05,2024-25,Toronto Raptors,Milwaukee Bucks,30,28,58,99,85,184,,
+2024-11-05_PHI_CHI,2024-11-05,2024-25,Chicago Bulls,Philadelphia 76ers,28,28,56,108,100,208,,
+2024-11-06_OKC_POR,2024-11-06,2024-25,Portland Trail Blazers,Oklahoma City Thunder,29,31,60,99,137,236,,
+2024-11-06_HOU_MEM,2024-11-06,2024-25,Memphis Grizzlies,Houston Rockets,27,26,53,128,108,236,,
+2024-11-06_UTA_DET,2024-11-06,2024-25,Detroit Pistons,Utah Jazz,23,24,47,126,119,245,,
+2024-11-06_PHI_CLE,2024-11-06,2024-25,Cleveland Cavaliers,Philadelphia 76ers,28,29,57,114,106,220,,
+2024-11-06_MIA_DEN,2024-11-06,2024-25,Denver Nuggets,Miami Heat,32,25,57,135,122,257,,
+2024-11-09_BKN_NYK,2024-11-09,2024-25,New York Knicks,Brooklyn Nets,29,28,57,124,122,246,,
